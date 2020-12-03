@@ -1,0 +1,7 @@
+Make sure npm is installed in your system
+
+1.open a separate terminal in this directory ('/Backend')
+2.type npm install 
+	<node_modules will get installed locally>
+3.type nodemon
+	<Backend server will start on localhost:5000>

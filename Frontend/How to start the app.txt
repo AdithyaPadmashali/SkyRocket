@@ -1,0 +1,7 @@
+Make sure npm is installed in your system
+
+1.open terminal in this directory ('react-app')
+2.type npm install 
+	<node_modules will get installed locally>
+3.type npm start
+	<react server will run at localhost>
