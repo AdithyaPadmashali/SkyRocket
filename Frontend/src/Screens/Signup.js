@@ -52,7 +52,7 @@ function Signup() {
                 color: 'white'
             }}>
                 <div className="card-image">
-                    <img src="https://wallpaperaccess.com/full/2338249.jpg" style={{ borderRadius: '10px', height: "auto" }} />
+                    <img src="https://q3p9g6n2.rocketcdn.me/wp-content/ml-loads/2018/07/rocket-rockets-blast-off-shutterstock_566814361-800x450.jpg" style={{ borderRadius: '10px', height: "600px" }} />
                     <span className="card-title">Welcome To SkyRocket!</span>
                 </div>
             </div>
