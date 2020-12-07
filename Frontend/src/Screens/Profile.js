@@ -77,7 +77,7 @@ function Profile() {
             {/* Products user is SELLING */}
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
                 {searchedProds.map((p) => {
-                    return (
+                    return (!p.isPurchased) && (
                         <div className="card" style={cardstyle} key={p._id}>
                             <div className="card-image">
                                 <img src={p.photo} />
@@ -86,7 +86,6 @@ function Profile() {
                             <div className="card-content" style={{ paddingTop: '0px' }}>
                                 <div onClick={() => deleteit(p._id)} className="btn-floating halfway-fab waves-effect waves-light #e53935 red darken-1 "><i className="material-icons">delete</i></div>
                                 <h6>{p.description}</h6>
-                                {/* <h6> {'Posted By:' + p.postedBy.name}</h6> */}
                                 <h6><b>{'Rs. ' + p.price}</b></h6>
                             </div>
                         </div>)

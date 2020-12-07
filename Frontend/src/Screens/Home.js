@@ -5,7 +5,7 @@ function Home() {
 
     const { state, dispatch } = useContext(UserContext)
 
-    const [prods, setProds] = useState([])
+    const [prods, setProds] = useState([]) //hooks used
     const [search, setSearch] = useState('')
     const [min, setMin] = useState('')
     const [max, setMax] = useState('')
@@ -34,7 +34,7 @@ function Home() {
         })
             .then(res => res.json())
             .then(res => {
-                alert("added successfully to cart")
+                alert("Added successfully to Cart")
             })
             .catch(error => console.log(error))
     }
@@ -48,6 +48,14 @@ function Home() {
         border: "490px"
 
     }
+
+    // const imgStyle = {
+    //     maxWidth: "150px",
+    //     maxHeight: "150px",
+    //     marginLeft: "auto",
+    //     marginRight: "auto",
+    //     padding: "30px"
+    // }
 
     const imgStyle = {
         maxWidth: "150px",
@@ -68,7 +76,7 @@ function Home() {
     return (
         <div>
             <div style={{ display: 'flex', maxWidth: "400px", margin: "5px auto", textAlign: 'center' }}>
-                <br />Search: <input type="search" placeholder='Search For products' value={search} onChange={(e) => setSearch(e.target.value)}></input>
+                <input type="search" placeholder='Search For products' value={search} onChange={(e) => setSearch(e.target.value)}></input>
                 <i className="small material-icons" style={{ marginTop: '10px', color: "white" }}>search</i>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -79,7 +87,7 @@ function Home() {
                 {filteredProds.map((p) => {
                     return (!p.inCart && !p.isPurchased && (p.postedBy.name != JSON.parse(localStorage.getItem('user')).name)) ? (
                         <div className="card" style={cardstyle} key={p._id}>
-                            <div className="card-image" style={imgStyle}>
+                            <div className="card-image">
                                 <img src={p.photo} />
                             </div>
                             <h5><b>{p.name}</b></h5>
@@ -96,6 +104,8 @@ function Home() {
 
 
             </div>
+            <hr style={{ height: "2px", borderWidth: "0px", backgroundColor: '#777' }} />
+
         </div>
     )
 }

@@ -103,10 +103,10 @@ function Cart() {
     return (
         <div style={{ textAlign: 'center' }}>
             <h2 style={{ color: "white", }}>Cart:</h2>
-            <h4 style={{ color: "white" }}>Your cart total: Rs. {grandTotal()}</h4>
+            <h4 style={{ color: "white" }}>Your Cart Total: Rs. {grandTotal()}</h4>
             <hr style={{ height: "2px", borderWidth: "0px", backgroundColor: '#777' }} />
-            <button onClick={() => emptyCart()}>empty Cart</button>
-            <button onClick={() => purchase()}>Purchase All</button>
+            <button style= {{ width: "150px", position: "absolute", right: "220px" }} onClick={() => emptyCart()} className="waves-effect waves-red btn">Empty Cart</button>
+            <button style= {{ width: "150px", marginTop: "45px", position: "absolute", right: "220px" }} onClick={() => purchase()} className="waves-effect waves-light btn">Purchase All</button>
 
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
 
@@ -127,7 +127,7 @@ function Cart() {
             </div>
 
             <div>
-                <h4 style={{ color: "white" }}>GrandTotal is Rs. {grandTotal()}</h4>
+                <h4 style={{ color: "white" }}>Grand Total is Rs. {grandTotal()}</h4>
             </div>
             <br />
             <hr style={{ height: "2px", borderWidth: "0px", backgroundColor: '#08000E' }} />
