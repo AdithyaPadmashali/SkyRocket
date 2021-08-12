@@ -4,9 +4,10 @@ const app = express();
 const port = 5000;
 const cors = require('cors')
 const mongoose = require('mongoose')
+// const uri = 'mongodb+srv://adithya:rk4cdoKorHi5aNOr@cluster0.iubel.mongodb.net/Cluster0?retryWrites=true&w=majority'
 const uri = 'mongodb+srv://adithya:rk4cdoKorHi5aNOr@cluster0.iubel.mongodb.net/Cluster0?retryWrites=true&w=majority'
 
-mongoose.connect(uri)
+mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         console.log("Database connected");
     }).catch((err) => {
@@ -14,7 +15,8 @@ mongoose.connect(uri)
     })
 
 app.use(cors())
-app.use(bodyParser.json())
+app.use(express.json())
+// app.use(bodyParser.json())
 
 app.use(require('./routes/signup.js'))
 app.use(require('./routes/signin.js'))
