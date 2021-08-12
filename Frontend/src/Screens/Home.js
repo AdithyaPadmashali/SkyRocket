@@ -12,7 +12,7 @@ function Home() {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/allProducts', {
+        fetch('/allProducts', {
             method: 'get',
         })
             .then((res) => res.json())
@@ -22,7 +22,7 @@ function Home() {
     }, [])
 
     const addToCart = (id) => {
-        fetch('http://localhost:5000/addtocart', {
+        fetch('/addtocart', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt'),
                 'Content-Type': 'application/json'

@@ -11,7 +11,7 @@ function Signup() {
     const [password, setPassword] = useState('')
 
     const clicked = () => {
-        fetch('http://localhost:5000/signup', {
+        fetch('/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

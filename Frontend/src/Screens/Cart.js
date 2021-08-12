@@ -8,7 +8,7 @@ function Cart() {
 
     //get the products from the cart
     const getCart = () => {
-        fetch('http://localhost:5000/getCart', {
+        fetch('/getCart', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt'),
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ function Cart() {
     }
 
     const removeFromCart = (id) => {
-        fetch('http://localhost:5000/removefromcart', {
+        fetch('/removefromcart', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt'),
                 'Content-Type': 'application/json'
@@ -105,8 +105,8 @@ function Cart() {
             <h2 style={{ color: "white", }}>Cart:</h2>
             <h4 style={{ color: "white" }}>Your Cart Total: Rs. {grandTotal()}</h4>
             <hr style={{ height: "2px", borderWidth: "0px", backgroundColor: '#777' }} />
-            <button style= {{ width: "150px", position: "absolute", right: "220px" }} onClick={() => emptyCart()} className="waves-effect waves-red btn">Empty Cart</button>
-            <button style= {{ width: "150px", marginTop: "45px", position: "absolute", right: "220px" }} onClick={() => purchase()} className="waves-effect waves-light btn">Purchase All</button>
+            <button style={{ width: "150px", position: "absolute", right: "220px" }} onClick={() => emptyCart()} className="waves-effect waves-red btn">Empty Cart</button>
+            <button style={{ width: "150px", marginTop: "45px", position: "absolute", right: "220px" }} onClick={() => purchase()} className="waves-effect waves-light btn">Purchase All</button>
 
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
 

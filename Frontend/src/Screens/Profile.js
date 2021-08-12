@@ -8,7 +8,7 @@ function Profile() {
     const [purchasedprods, setPurchasedProds] = useState([])
     const { state, dispatch } = useContext(UserContext)
     const getProducts = () => {
-        fetch('http://localhost:5000/myProducts', {
+        fetch('/myProducts', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt')
             }
@@ -19,7 +19,7 @@ function Profile() {
     }
 
     const getPurchasedProds = () => {
-        fetch('http://localhost:5000/getPurchased', {
+        fetch('/getPurchased', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt')
             }
@@ -43,7 +43,7 @@ function Profile() {
     }, [])
 
     const deleteit = (id) => {
-        fetch('http://localhost:5000/deleteProd', {
+        fetch('/deleteProd', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

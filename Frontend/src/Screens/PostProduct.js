@@ -10,7 +10,7 @@ function PostProduct() {
     const [url, setUrl] = useState('')
 
     const clicked = () => {
-        fetch('http://localhost:5000/postProduct', {
+        fetch('/postProduct', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -41,7 +41,7 @@ function PostProduct() {
     return (
         <div>
             <div className='card' style={style}>
-                <h2 style = {{textAlign: "center",color:"#12BDA6" }}>Sell your Product!</h2>
+                <h2 style={{ textAlign: "center", color: "#12BDA6" }}>Sell your Product!</h2>
                 <h5>Enter product details below</h5>
                 <input type="text" placeholder=' Name' value={name} onChange={(e) => { setName(e.target.value) }}></input>
                 <input type="text" placeholder='Detailed Description' value={desc} onChange={(e) => { setDesc(e.target.value) }}></input>
