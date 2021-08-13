@@ -23,6 +23,7 @@ app.use(require('./routes/signin.js'))
 app.use(require('./routes/postProduct.js'))
 app.use(require('./routes/cart.js'))
 
+console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
 
     app.use(express.static('client/build'));
