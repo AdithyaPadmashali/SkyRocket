@@ -65,7 +65,7 @@ function Signin() {
                 textAlign: 'center',
                 maxWidth: '800px',
                 borderRadius: '10px',
-                backgroundColor: '#222',
+                backgroundColor: '#555',
                 color: 'white'
             }}>
                 <div className="card-image">
